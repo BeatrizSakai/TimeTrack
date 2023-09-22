@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { EntrarComponent } from './entrar/entrar.component';
+import { AgendaComponent } from './agenda/agenda.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CadastroComponent,
+    InicioComponent,
+    EntrarComponent,
+    AgendaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

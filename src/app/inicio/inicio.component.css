@@ -1,0 +1,34 @@
+#titulo_principal{
+    color: #2B3775;
+    display: flex;
+}
+.imagem_1{
+    display: flex;
+    justify-content: end;
+    width: 625px;
+
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.conteudo{
+    justify-content: flex-start;
+    margin-left: 10%;
+    width: 35%;
+    
+}
+.botao{
+    margin-right: 5%;
+    background-color: #2B3775 !important;
+    color: aliceblue !important;
+    text-decoration: none;
+}
+.la{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.texto{
+    font-family: 'Nunito', sans-serif;
+    color: #2B3775;
+}
