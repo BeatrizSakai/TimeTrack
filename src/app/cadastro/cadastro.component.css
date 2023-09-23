@@ -1,0 +1,27 @@
+.imagem{
+    height: 650px;
+    width: 600px;
+    margin-top: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    
+}
+.la{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.texto{
+    font-family: 'Nunito', sans-serif;
+    color: #2B3775;
+}
+.titulo_principal{
+    color: #2B3775;
+    display: flex;
+}

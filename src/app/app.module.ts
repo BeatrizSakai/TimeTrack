@@ -9,6 +9,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { AgendaComponent } from './agenda/agenda.component';
+import {MatInputModule} from '@angular/material/input';
+
+
 
 @NgModule({
   declarations: [
@@ -16,13 +19,16 @@ import { AgendaComponent } from './agenda/agenda.component';
     CadastroComponent,
     InicioComponent,
     EntrarComponent,
-    AgendaComponent
+    AgendaComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
