@@ -9,14 +9,15 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { AgendaComponent } from './agenda/agenda.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent,
     InicioComponent,
     EntrarComponent,
     AgendaComponent,
@@ -29,6 +30,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    MatGridListModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,66 @@
     <div class="la" >
         <div class="conteudo">
             <h1 class="titulo_principal">Cadastre-se</h1>
-
+            <div>
+                <form class="example-form">
+                    <table class="example-full-width" cellspacing="0"><tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Nome</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Sobrenome</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </td>
+                    </table>
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" style="display: flex !important;">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                        </mat-form-field>
+                    </form>
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" style="display: flex !important;">
+                        <mat-label>Senha</mat-label>
+                        <input type="password" matInput >
+                        </mat-form-field>
+                    </form>
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" style="display: flex !important;">
+                        <mat-label>Confirme sua Senha</mat-label>
+                        <input type="password" matInput >
+                        </mat-form-field>
+                    </form>
+                    <table class="example-full-width" cellspacing="0"><tr>
+                        <td>
+                            <mat-form-field>
+                                <mat-label>Data de Nascimento</mat-label>
+                                <input matInput [matDatepicker]="picker">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Telefone</mat-label>
+                                <input type="tel" matInput>
+                            </mat-form-field>
+                        </td>
+                    </table>
+                    
+                </form>
+                <div><a  mat-raised-button  href = "./entrar" class="botao" >Cadastrar-se</a></div> 
+            </div>
         </div>
         <div>
             <img src="/assets/Group 1.png" alt="" class="imagem">

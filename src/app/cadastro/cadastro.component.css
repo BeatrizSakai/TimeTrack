@@ -9,8 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35%;
-    
+    flex-direction: column;
+    width: 700px;
 }
 .la{
     display: flex;
@@ -24,4 +24,10 @@
 .titulo_principal{
     color: #2B3775;
     display: flex;
+}
+.botao{
+    margin-right: 5%;
+    background-color: #2B3775 !important;
+    color: aliceblue !important;
+    text-decoration: none;
 }
