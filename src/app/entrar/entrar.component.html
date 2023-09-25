@@ -7,26 +7,28 @@
     <title>Entrar</title>
 </head>
 <body>
-    <div class="form">
-        <form action="#">
-            <div class="form-header">
-                <div class="title">
-                    <h1>Entrar</h1>
-                </div>
-                <div class=" input-group">
-                    <div class=" input-box">
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="input-box">
-                            <input type="password" id="password" name="password" placeholder="Senha" required>
-                        </div>
-                        <div class="login-button">
-                            <button> <a href="#">Entrar</a></button>
-                        </div>
-                </div>
+    <div class="la">
+        <div class="conteudo">
+            <div class="title">
+                <h1>Entrar</h1>
             </div>
-            
-        </form>
+                <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+                            <mat-hint>Errors appear instantly!</mat-hint>
+                            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">Please enter a valid email address</mat-error>
+                            <mat-error *ngIf="emailFormControl.hasError('required')">Email is   <strong>required</strong></mat-error>
+                        </mat-form-field>
+                        </form>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Senha</mat-label> 
+                                <input matInput type="password">
+                            </mat-form-field> 
+                        <div>
+                            <a  mat-raised-button  href = "./entrar" class="botao" > Entrar</a>
+                        </div>
+        </div>
         <div class="imagem">
             <img src="/assets/Group 1.png" alt="" class="imagem">
         </div>

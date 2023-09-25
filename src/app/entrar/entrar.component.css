@@ -1,10 +1,9 @@
 .imagem{
-    display: flex;
-    justify-content: end;
-    width: 625px;
-    align-items: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: 650px;
+    width: 600px;
+    margin-top: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 .form-header{
     display: flex start;
@@ -12,6 +11,18 @@
     margin-bottom: 3rem; 
 }
 
+.la{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+}
 .login-button button{
     border: none;
     background-color: #2B3775;
@@ -92,4 +103,11 @@
     align-items: center;
     flex-direction: row;
     padding: 3rem;
+}
+
+.botao{
+    margin-right: 5%;
+    background-color: #2B3775 !important;
+    color: aliceblue !important;
+    text-decoration: none;
 }
