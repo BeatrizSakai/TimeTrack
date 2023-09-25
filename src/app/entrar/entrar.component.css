@@ -1,0 +1,95 @@
+.imagem{
+    display: flex;
+    justify-content: end;
+    width: 625px;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.form-header{
+    display: flex start;
+    justify-content: space-between;
+    margin-bottom: 3rem; 
+}
+
+.login-button button{
+    border: none;
+    background-color: #2B3775;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    background-color: #979EDB; 
+}
+
+.input-box input:focus-visible{
+    outline: 1xp solid #979EDB;
+}
+
+.input-box input::placeholder{
+    color: aliceblue;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: black;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+
+}
+
+.login-button button:hover {
+    background-color: #979EDB;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: blanchedalmond;
+}
+.texto{
+    font-family: 'Nunito', sans-serif;
+    color: #2B3775;
+}
+.title{
+    color: #2B3775;
+    display: flex;
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.form {
+    width: 35%;
+    display: flex;
+    margin-left: 10%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 3rem;
+}
