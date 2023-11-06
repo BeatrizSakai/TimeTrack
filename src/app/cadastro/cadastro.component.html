@@ -9,23 +9,19 @@
     <div class="la" >
         <div class="conteudo">
             <h1 class="titulo_principal">Cadastre-se</h1>
-            <div>
-                <form class="example-form">
-                    <table class="example-full-width" cellspacing="0"><tr>
-                        <td>
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Nome</mat-label>
-                                <input matInput>
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Sobrenome</mat-label>
-                                <input matInput>
-                            </mat-form-field>
-                        </td>
-                    </table>
-                    <form class="example-form">
+            <div style="width: 500px;">
+                <form class="example-form" >
+                    <div style="display: flex;">
+                        <mat-form-field style="flex: 1; margin-right: 5px;">
+                        <mat-label>Nome</mat-label>
+                        <input matInput>
+                        </mat-form-field>
+                        <mat-form-field style="flex: 1;">
+                        <mat-label>Sobrenome</mat-label>
+                        <input type="text" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div>
                         <mat-form-field class="example-full-width" style="display: flex !important;">
                         <mat-label>Email</mat-label>
                         <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
@@ -36,38 +32,38 @@
                             Email is <strong>required</strong>
                         </mat-error>
                         </mat-form-field>
-                    </form>
-                    <form class="example-form">
+                    </div>
+                    <div>
                         <mat-form-field class="example-full-width" style="display: flex !important;">
                         <mat-label>Senha</mat-label>
                         <input type="password" matInput >
                         </mat-form-field>
-                    </form>
-                    <form class="example-form">
+                    </div>
+                    <div>
                         <mat-form-field class="example-full-width" style="display: flex !important;">
                         <mat-label>Confirme sua Senha</mat-label>
                         <input type="password" matInput >
                         </mat-form-field>
-                    </form>
-                    <table class="example-full-width" cellspacing="0"><tr>
-                        <td>
-                            <mat-form-field>
+                    </div>
+                    <div style="display: flex;"> 
+                    
+                            <mat-form-field style="flex: 1; margin-right: 5px;">
                                 <mat-label>Data de Nascimento</mat-label>
                                 <input matInput [matDatepicker]="picker">
                                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
                             </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field class="example-full-width">
+                        
+                        
+                            <mat-form-field style="flex: 1;">
                                 <mat-label>Telefone</mat-label>
                                 <input type="tel" matInput>
                             </mat-form-field>
-                        </td>
-                    </table>
+                        
+                    </div>
                     
                 </form>
-                <div><a  mat-raised-button  href = "./entrar" class="botao" >Cadastrar-se</a></div> 
+                <div style="justify-content: center; display: flex;"><a  mat-raised-button  href = "./entrar" class="botao" >Cadastrar-se</a></div> 
             </div>
         </div>
         <div>

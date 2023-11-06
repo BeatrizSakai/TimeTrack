@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css'],
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf, MatNativeDateModule,MatDatepickerModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf, MatNativeDateModule,MatDatepickerModule, MatButtonModule, MatDividerModule, MatIconModule],
 })
 export class CadastroComponent {
   title = 'Cadastro';
@@ -21,6 +23,7 @@ import {
   Validators,
   FormsModule,
   ReactiveFormsModule,
+
 } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {NgIf} from '@angular/common';
