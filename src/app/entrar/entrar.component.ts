@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 import {
   FormControl,
   FormGroupDirective,
@@ -26,7 +29,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './entrar.component.html',
   styleUrls: ['./entrar.component.css'], 
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf, MatButtonModule, MatDividerModule, MatIconModule],
 })
 export class EntrarComponent{
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
