@@ -1,10 +1,62 @@
-<p>agenda works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div>
+        <mat-toolbar>
+            <div class="conteudo">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span><img src="./assets/Timetrack_logo.png " alt="" style="height: 70px; width: 130px;"></span>
+                <button style="position: absolute; right: 0;" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+                
+            </div>    
+        </mat-toolbar>
+    </div>
+    <div class="lateral">
+        <div>
+            <div class="calendario">
+                <mat-card class="demo-inline-calendar-card">
+                <mat-calendar [(selected)]="selected"></mat-calendar>
+            </mat-card>
+            <div class="example-button-container" id="adicionar">
+                <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" style="background-color: #2B3775;">
+                    <mat-icon>add</mat-icon>
+                </button>
+                <h3> Adicionar tarefa</h3>
+            </div>
+            <div id="agendas">
+                <h3>Minhas agendas</h3>
+                <mat-chip-listbox aria-label="Fish selection">
+                    <mat-chip-option>One fish</mat-chip-option>
+                    <mat-chip-option>Two fish</mat-chip-option>
+                </mat-chip-listbox>
+            </div>
+            <div class="filtros">
+                <h3>Filtros</h3>
+                <mat-checkbox class="example-margin" [(ngModel)]="checked">Atividades</mat-checkbox>
+                <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Metas</mat-checkbox>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+    
+    
+    
 
-<div>
-    <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    </mat-grid-list>
-</div>
+    
+    
+</body>
+</html>

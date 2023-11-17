@@ -1,3 +1,41 @@
-mat-grid-tile {
-    background: lightblue;
+.conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+.calendario{
+    width: 300px;
+    height: 300px;
+}
+
+.lateral {
+    margin-top: 0;
+    width: fit-content;
+    display: flex;
+    height: 100%;
+    border-right: solid;
+    border-right-color: whitesmoke;
+
+}
+#adicionar{
+    margin-top: 20px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+#agendas{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.filtros{
+    margin-top: 20px;
+    margin-left: 15px;
 }

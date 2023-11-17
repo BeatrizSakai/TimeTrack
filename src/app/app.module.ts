@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { MbscModule } from '@mobiscroll/angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +13,10 @@ import { AgendaComponent } from './agenda/agenda.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {NgIf} from '@angular/common';
 
 
 
@@ -18,18 +24,21 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   declarations: [
     AppComponent,
     InicioComponent,
-    AgendaComponent,
+    
 
 
   ],
-  imports: [
+  imports: [  
+    FormsModule,   
+    MbscModule, 
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
     MatGridListModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
