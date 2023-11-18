@@ -12,21 +12,31 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {NgIf} from '@angular/common';
 
-import { AgendaModule } from './agenda/agenda.module';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCardModule} from '@angular/material/card';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import { CommonModule } from '@angular/common';
+import { CalendarioComponent } from './calendario/calendario.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    
-    
+    AgendaComponent,
+    CalendarioComponent,
     
 
 
@@ -41,7 +51,7 @@ import { AgendaModule } from './agenda/agenda.module';
     MatInputModule,
     MatGridListModule,
     MatDatepickerModule,
-    
+    MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule, MatToolbarModule, MatButtonModule, MatIconModule, NgIf, MatSidenavModule, MatCardModule, MatDatepickerModule, MatNativeDateModule, MatChipsModule, MatCheckboxModule, FormsModule, CommonModule
   ],
 
   providers: [],

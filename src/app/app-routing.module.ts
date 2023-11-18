@@ -4,7 +4,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { AgendaComponent } from './agenda/agenda.component';
-import { CalendarioComponent } from './agenda/calendario/calendario.component';
+import { CalendarioComponent } from './calendario/calendario.component';
 
 
 const routes: Routes = [

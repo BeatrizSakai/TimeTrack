@@ -1,22 +1,6 @@
 selectedDate: Date;
 import { Component } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar'; 
-import {NgIf} from '@angular/common';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatCardModule} from '@angular/material/card';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {FormsModule} from '@angular/forms';
 import {ThemePalette} from '@angular/material/core';
-import { AgendaModule } from "./agenda.module";
-
-
 
 export interface Task {
   name: string;
@@ -29,8 +13,7 @@ export interface Task {
     selector: 'app-agenda',
     templateUrl: './agenda.component.html',
     styleUrls: ['./agenda.component.css'],
-    standalone: true,
-    imports: [MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule, MatToolbarModule, MatButtonModule, MatIconModule, NgIf, MatSidenavModule, MatCardModule, MatDatepickerModule, MatNativeDateModule, MatChipsModule, MatCheckboxModule, FormsModule, AgendaModule]
+    
 })
 
 
