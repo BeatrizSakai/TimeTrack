@@ -18,12 +18,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {NgIf} from '@angular/common';
 
+import { AgendaModule } from './agenda/agenda.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
+    
+    
     
 
 
@@ -40,6 +43,7 @@ import {NgIf} from '@angular/common';
     MatDatepickerModule,
     
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
