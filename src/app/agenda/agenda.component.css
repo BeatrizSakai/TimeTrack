@@ -40,3 +40,8 @@
     margin-top: 20px;
     margin-left: 15px;
 }
+.tarefa-card {
+    width: 300px; /* ou a largura desejada */
+    margin-top: 16px; /* ou a margem desejada */
+    /* Adicione outros estilos conforme necessário */
+}

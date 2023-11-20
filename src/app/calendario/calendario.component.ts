@@ -1,52 +1,100 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task/task.service';
+
+export interface Task {
+  name: string;
+  completed: boolean;
+  color: string;
+  subtasks?: Task[];
+  title?: string; // Adicione esta propriedade
+}
 
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
   styleUrls: ['./calendario.component.css'],
-  
 })
-
 export class CalendarioComponent implements OnInit {
   dataAtual: Date = new Date();
-  diasCalendario: Date[] = [];
+  diasCalendario: { date: Date; tasks: Task[] }[] = [];
+  tasks: Task[] = [];
+
+  constructor(private taskService: TaskService) {}
 
   ngOnInit() {
-    this.construirCalendario();
+    this.taskService.getTasks().subscribe((tasks: Task[]) => {
+      // Atualize as tarefas e reconstrua o calendário
+      this.tasks = tasks;
+      this.construirCalendario();
+    });
   }
+  
 
   construirCalendario() {
     const ano = this.dataAtual.getFullYear();
     const mes = this.dataAtual.getMonth();
-
+  
     const primeiroDiaDaSemana = 0; // domingo
-    const ultimoDiaDaSemana = 6;   // sábado
-
-    // Vai subtraindo -1 até chegarmos no primeiro dia da semana
+    const ultimoDiaDaSemana = 6; // sábado
+  
     const dataInicial = new Date(ano, mes, 1);
     while (dataInicial.getDay() !== primeiroDiaDaSemana) {
       dataInicial.setDate(dataInicial.getDate() - 1);
     }
-
-    // Vai somando +1 até chegarmos no último dia da semana
+  
     const dataFinal = new Date(ano, mes + 1, 0);
-    while (dataFinal.getDay() !== ultimoDiaDaSemana) {
-      dataFinal.setDate(dataFinal.getDate() + 1);
-    }
-
+  
     this.diasCalendario = [];
     for (
       let data = new Date(dataInicial.getTime());
       data <= dataFinal;
       data.setDate(data.getDate() + 1)
     ) {
-      this.diasCalendario.push(new Date(data.getTime()));
+      const dia: { date: Date; tasks: Task[] } = {
+        date: new Date(data.getTime()),
+        tasks: this.getTasksForDate(new Date(data.getTime())),
+      };
+  
+      this.diasCalendario.push(dia);
     }
+  }
+  
+
+  getTasksForDate(date: Date): Task[] {
+    return this.tasks.filter((task) => {
+      const taskDate = task.subtasks && task.subtasks.length > 0 ? new Date(task.subtasks[0].name) : null;
+
+      return (
+        taskDate &&
+        taskDate.getDate() === date.getDate() &&
+        taskDate.getMonth() === date.getMonth() &&
+        taskDate.getFullYear() === date.getFullYear()
+      );
+    });
+  }
+
+  // Adicione a lógica para criar uma tarefa (utilize isso no seu formulário de criação de tarefas)
+  criarTarefa() {
+    const novaTarefa: Task = {
+      name: 'Nova Tarefa',
+      completed: false,
+      color: 'cor',
+      subtasks: [{ name: this.formatarData(this.dataAtual), completed: false, color: 'cor' }],
+    };
+  
+    this.taskService.addTask(novaTarefa);
+    this.construirCalendario(); // Atualizar o calendário após criar uma nova tarefa
+  }
+  
+
+  formatarData(data: Date): string {
+    // Adapte o formato da data conforme necessário
+    return `${data.getFullYear()}-${data.getMonth() + 1}-${data.getDate()}`;
   }
 
   alterarMes(offsetMes: number) {
-      this.dataAtual.setMonth(this.dataAtual.getMonth() + offsetMes);
-      this.dataAtual = new Date(this.dataAtual.getTime());
-      this.construirCalendario();
+    this.dataAtual.setMonth(this.dataAtual.getMonth() + offsetMes);
+    this.dataAtual = new Date(this.dataAtual.getTime());
+    this.construirCalendario();
   }
 }

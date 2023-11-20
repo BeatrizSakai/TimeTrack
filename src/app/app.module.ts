@@ -28,7 +28,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { CommonModule } from '@angular/common';
 import { CalendarioComponent } from './calendario/calendario.component';
-
+import { TaskFormComponent } from './task/task-form.component'; 
+import { TaskService } from './task/task.service';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { CalendarioComponent } from './calendario/calendario.component';
     InicioComponent,
     AgendaComponent,
     CalendarioComponent,
+    TaskFormComponent,
     
 
 
@@ -51,10 +53,12 @@ import { CalendarioComponent } from './calendario/calendario.component';
     MatInputModule,
     MatGridListModule,
     MatDatepickerModule,
-    MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule, MatToolbarModule, MatButtonModule, MatIconModule, NgIf, MatSidenavModule, MatCardModule, MatDatepickerModule, MatNativeDateModule, MatChipsModule, MatCheckboxModule, FormsModule, CommonModule
+    MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule, MatToolbarModule, MatButtonModule, MatIconModule, NgIf, MatSidenavModule, MatCardModule, MatDatepickerModule, MatNativeDateModule, MatChipsModule, MatCheckboxModule, FormsModule, CommonModule,
+    MbscModule,
+  
   ],
 
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
