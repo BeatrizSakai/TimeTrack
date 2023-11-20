@@ -12,6 +12,11 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt);
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
@@ -58,7 +63,9 @@ import { TaskService } from './task/task.service';
   
   ],
 
-  providers: [TaskService],
+  providers: [TaskService, { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
+    
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

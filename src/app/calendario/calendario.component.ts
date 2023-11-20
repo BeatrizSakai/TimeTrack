@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../task/task.service';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+// Registre o idioma português
+registerLocaleData(localePt);
+
+registerLocaleData(localePt);
 
 export interface Task {
   name: string;
@@ -13,6 +21,9 @@ export interface Task {
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
   styleUrls: ['./calendario.component.css'],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }
+  ]
 })
 export class CalendarioComponent implements OnInit {
   dataAtual: Date = new Date();

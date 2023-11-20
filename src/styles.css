@@ -1,5 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; font-family: Roboto, "Helvetica Neue", sans-serif; color: #2B3775; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 h3 {color: #2B3775;}
+
+.tarefa-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Ajuste conforme necessário */
+    margin: auto; /* Centraliza o formulário */
+}
+  
+.form-group {
+    margin-bottom: 10px;
+}
+  
+.buttonForm {
+    margin-top: 10px; /* Adiciona um espaço entre os botões e os campos do formulário */
+    background-color: #2B3775 !important;
+    color: aliceblue !important;
+    text-decoration: none;
+    margin-right: 5px;
+}
