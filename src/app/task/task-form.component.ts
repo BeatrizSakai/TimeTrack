@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from './task.service';
 import { Task } from '../calendario/calendario.component';
@@ -12,7 +12,7 @@ import { Task } from '../calendario/calendario.component';
       
       <label for="data">Data da Tarefa:</label>
       <input type="date" id="data" name="dataTarefa" [(ngModel)]="dataTarefa" required>
-
+      <button type="button" (click)="fecharFormulario()">Fechar</button>
       <button type="submit">Criar Tarefa</button>
     </form>
   `,
@@ -20,6 +20,8 @@ import { Task } from '../calendario/calendario.component';
 export class TaskFormComponent {
   nomeTarefa = '';
   dataTarefa = '';
+
+  @Output() fecharFormularioEvent = new EventEmitter<void>();
 
   constructor(private taskService: TaskService) {}
 
@@ -35,4 +37,9 @@ export class TaskFormComponent {
     this.nomeTarefa = '';
     this.dataTarefa = '';
   }
+
+  fecharFormulario() {
+    this.fecharFormularioEvent.emit();
+  }
+  
 }

@@ -91,5 +91,7 @@ export class AgendaComponent {selected: Date | null | undefined;
     exibirFormularioTarefa(): void {
         this.exibirFormulario = true;
     }
-  
+    fecharFormulario(): void {
+      this.exibirFormulario = false;
+    }
 }
