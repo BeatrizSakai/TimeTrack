@@ -35,6 +35,7 @@ import { CommonModule } from '@angular/common';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { TaskFormComponent } from './task/task-form.component'; 
 import { TaskService } from './task/task.service';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { TaskService } from './task/task.service';
     AgendaComponent,
     CalendarioComponent,
     TaskFormComponent,
+    PerfilComponent,
     
 
 

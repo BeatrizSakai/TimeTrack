@@ -5,14 +5,15 @@ import { InicioComponent } from './inicio/inicio.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { CalendarioComponent } from './calendario/calendario.component';
-
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   {path: 'inicio', component: InicioComponent},
   {path: 'entrar', component: EntrarComponent},
   {path: 'agenda', component: AgendaComponent},
-  {path: 'calendario', component: CalendarioComponent}
+  {path: 'calendario', component: CalendarioComponent},
+  {path: 'perfil', component: PerfilComponent}
 ];
 
 @NgModule({
